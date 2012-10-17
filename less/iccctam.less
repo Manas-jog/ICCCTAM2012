@@ -1,0 +1,144 @@
+//importing all standard .less from bootstrap
+
+// CSS Reset
+@import "reset.less";
+
+// Core variables and mixins
+@import "variables.less"; // Modify this for custom colors, font-sizes, etc
+@import "mixins.less";
+
+// Grid system and page structure
+@import "scaffolding.less";
+@import "grid.less";
+@import "layouts.less";
+
+// Base CSS
+@import "type.less";
+@import "code.less";
+@import "forms.less";
+@import "tables.less";
+
+// Components: common
+@import "sprites.less";
+@import "dropdowns.less";
+@import "wells.less";
+@import "component-animations.less";
+@import "close.less";
+
+// Components: Buttons & Alerts
+@import "buttons.less";
+@import "button-groups.less";
+@import "alerts.less"; // Note: alerts share common CSS with buttons and thus have styles in buttons.less
+
+// Components: Nav
+@import "navs.less";
+@import "navbar.less";
+@import "breadcrumbs.less";
+@import "pagination.less";
+@import "pager.less";
+
+// Components: Popovers
+@import "modals.less";
+@import "tooltip.less";
+@import "popovers.less";
+
+// Components: Misc
+@import "thumbnails.less";
+@import "labels-badges.less";
+@import "progress-bars.less";
+@import "accordion.less";
+@import "carousel.less";
+@import "hero-unit.less";
+
+//variables
+@import "iccctam-variables.less";
+
+header
+{
+        padding: @headerPaddingTopBottom 0 @headerPaddingTopBottom 0;   
+        
+        h2
+        {
+            font-size: @headerH2Size;
+            line-height: @headerH2Size + 2;
+        }
+        
+        h3
+        {
+            font-size: @headerH3Size;
+            line-height: @headerH3Size + 2;
+        }
+        
+}
+    
+#iccctam
+{
+    
+    video
+    {
+        width: @promotionalVideoWidth;
+        .center-block();
+        height: auto;
+    }
+        
+    .descriptive-text
+    {
+       padding: @standardPaddingTopBottom 0 @standardPaddingTopBottom 0;      
+    }
+
+    .logo > img
+    {
+        position:relative;
+        height: @BITSLogoHeight;
+    	width: @BITSLogoWidth;
+		top:50%;
+		margin-top: -@BITSLogoHeight/2;
+    }
+       
+    section
+    {
+        padding: @standardSectionPaddingTopBottom 0 @standardSectionPaddingTopBottom 0; 
+        
+        h1
+        {
+            padding: @standardPaddingTopBottom 0 @standardPaddingTopBottom 0;   
+        }
+    }
+    
+}
+
+#keynoteSpeakers
+{   
+    .row
+    {
+        padding: @standardPaddingTopBottom 0 @standardPaddingTopBottom 0;
+        
+        li
+        {
+            h1
+            {
+                font-size: @keynoteSpeakerH1;
+                line-height: @keynoteSpeakerH1+0.2;
+                padding: @standardPaddingTopBottom/2 0 @standardPaddingTopBottom/2 0;
+            }
+            
+            h2
+            {
+                font-size: @keynoteSpeakerH2;
+                line-height: @keynoteSpeakerH2+0.2;
+                padding: 0;
+            }
+            
+            img
+            {
+                height: @keynoteSpeakerBoxHeight;
+            }
+            .caption
+            {
+                margin-top: @standardPaddingTopBottom 0 0 0;
+            }
+        }
+    
+    }
+    
+}
