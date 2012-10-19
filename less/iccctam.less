@@ -3,6 +3,9 @@
 // CSS Reset
 @import "reset.less";
 
+//variables
+@import "iccctam-variables.less"; 
+
 // Core variables and mixins
 @import "variables.less"; // Modify this for custom colors, font-sizes, etc
 @import "mixins.less";
@@ -50,95 +53,152 @@
 @import "carousel.less";
 @import "hero-unit.less";
 
-//variables
-@import "iccctam-variables.less";
+//utilities
+@import "utilities.less";
+
+//bootstrap fix for horizontal dragging
+html
+{
+    min-height: 100%;
+}
+
+body
+{
+    min-width: @bodyWidth; 
+}
 
 header
 {
-        padding: @headerPaddingTopBottom 0 @headerPaddingTopBottom 0;   
-        
-        h2
-        {
-            font-size: @headerH2Size;
-            line-height: @headerH2Size + 2;
-        }
-        
-        h3
-        {
-            font-size: @headerH3Size;
-            line-height: @headerH3Size + 2;
-        }
-        
-}
+    background-color: lighten(@neutralColor, 8%);
     
-#iccctam
+    .logo-container
+    {
+        background-color: @white;
+        width: @BITSlogoWidth + @ICCCTAMlogoWidth + @IEEElogoWidth + 6*@logoPaddingLeftRight;
+        height: @ICCCTAMlogoHeight + 2*@logoPaddingTopBottom;
+        .container-fixed();
+    }
+    
+    .logo-container .logo
+    {
+        display: block;
+        .box-shadow(0 0 1px 1px @neutralColor);
+        padding: @logoPaddingTopBottom @logoPaddingLeftRight;
+    }
+    
+}
+
+#bitsLogo
 {
-    
-    video
-    {
-        width: @promotionalVideoWidth;
-        .center-block();
-        height: auto;
-    }
-        
-    .descriptive-text
-    {
-       padding: @standardPaddingTopBottom 0 @standardPaddingTopBottom 0;      
-    }
-
-    .logo > img
-    {
-        position:relative;
-        height: @BITSLogoHeight;
-    	width: @BITSLogoWidth;
-		top:50%;
-		margin-top: -@BITSLogoHeight/2;
-    }
-       
-    section
-    {
-        padding: @standardSectionPaddingTopBottom 0 @standardSectionPaddingTopBottom 0; 
-        
-        h1
-        {
-            padding: @standardPaddingTopBottom 0 @standardPaddingTopBottom 0;   
-        }
-    }
+    position: absolute;
+    top: 0;
+    left: @logoContainerLeftBegin;
+    height: @BITSlogoHeight;
+    width: @BITSlogoWidth;
     
 }
 
-#keynoteSpeakers
-{   
-    .row
+#iccctamLogo
+{
+    position: absolute;
+    top: 0;
+    left: @logoContainerLeftBegin + @BITSlogoWidth + 2*@logoPaddingLeftRight;
+    height: @ICCCTAMlogoHeight;
+    width: @ICCCTAMlogoWidth;
+}
+
+#ieeeLogo
+{
+    position: absolute;
+    top: 0;
+    left: @logoContainerLeftBegin + @BITSlogoWidth + @ICCCTAMlogoWidth + 4*@logoPaddingLeftRight;
+    height: @IEEElogoHeight;
+    width: @IEEElogoWidth;
+}
+
+nav
+{
+    ul
     {
-        padding: @standardPaddingTopBottom 0 @standardPaddingTopBottom 0;
+        width: 180px;
+        padding: 0;
+        //.box-shadow(0 0 2px 2px darken(@baseColor, 10%));
+        //.border-radius(4px);
         
         li
         {
-            h1
+            list-style: none;
+            
+            a
             {
-                font-size: @keynoteSpeakerH1;
-                line-height: @keynoteSpeakerH1+0.2;
-                padding: @standardPaddingTopBottom/2 0 @standardPaddingTopBottom/2 0;
+                display: block;
+                padding: 10px;
+                font-size: 14px;
+                line-height: 18px;
+                text-align: center;
+                border-right: 1px solid @neutralColor;
+                border-left: 1px solid @neutralColor;
+                border-bottom: 1px solid @neutralColor;
+                background-color: lighten(@neutralColor, 5%);
+                color: @black;
             }
             
-            h2
+            a:hover
             {
-                font-size: @keynoteSpeakerH2;
-                line-height: @keynoteSpeakerH2+0.2;
-                padding: 0;
-            }
-            
-            img
-            {
-                height: @keynoteSpeakerBoxHeight;
-            }
-            .caption
-            {
-                margin-top: @standardPaddingTopBottom 0 0 0;
+                background-color: darken(@baseColor, 5%);
+                color: @white;
+                text-decoration: none;
+                .box-shadow(inset 0 0 4px 1px lighten(@baseColor, 10%));
             }
         }
-    
+        
+        li:first-child
+        {
+            a
+            {
+                .border-radius(2px);
+                border: 1px solid @neutralColor;
+            }
+        }
     }
+}
+
+#iccctamContent
+{
+    width: @BITSlogoWidth + @ICCCTAMlogoWidth + @IEEElogoWidth + 6*@logoPaddingLeftRight;
     
+    .caption-thumbnail
+    {
+        display: inline-block;
+        margin: 20px;
+        position:relative;
+        width: 254px;
+        height: 174px;
+        margin-left: auto;
+        margin-right: auto;
+        
+        .box-shadow(inset 0 0 4px 1px @neutralColor);
+        
+        img
+        {
+            position: absolute;
+            top:2px;
+            left:2px;
+            width: 250px;
+            height: 145px;
+        }
+        
+        p
+        {
+            display:block;
+            background-color: @neutralColor;
+            position:absolute;
+            bottom:2px;
+            left:2px;
+            width: 250px;
+            height: 25px;
+            text-align:center;
+            margin:0;
+        }
+    }
 }
