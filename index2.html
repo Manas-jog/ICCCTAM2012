@@ -53,9 +53,9 @@
     <div class="container" id="iccctamContent">
     <div class="row-fluid">
         <nav class="span3">
-            <div style="min-height:1px;">
-                <ul class="iccctam-navigation" style="list-style:none">
-                    <li class="active clearfix"><a href="#">Conference Overview</a></li>
+            <div style="min-height:1px;" class="affix-top" data-spy="affix" data-offset-top="606">
+                <ul>
+                    <li class="active"><a href="#">Conference Overview</a></li>
                     <li><a href="#">Keynote Speakers</a></li>                    
                     <li><a href="#">Workshops</a></li>                    
                     <li><a href="#">Schedule</a></li>                    
@@ -70,35 +70,74 @@
             </div>
         </nav>
         
-        <article class="span9">
+        <article class="span9" id="iccctamMainContent">
             <section>
                 <h1>Conference Overview</h1>
-                <p>Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description </p>
+                <p>Description Description Description Description Description Description Description Description Descriptionaaaaaa Description Description Description Description Description Description Description Description Description Description </p>
                 
             <div>
-            	<div class="row">
-                    <div class="caption-thumbnail span6">
-                        <img src="resources/cloud-computing-technologies.jpg" />
-                        <p>Technologies</p>
+            	<div class="centering-row">
+                	<div class="caption-thumbnail">
+                        <a href="#modalTechnologies" role="button" data-toggle="modal">
+                        	<img src="resources/cloud-computing-technologies.jpg" />
+                        </a>
+                        	<p>Technologies</p>
+                        
+                            <div class="modal hide fade" id="modalTechnologies">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                 <h3>TECHNOLOGIES</h3>
+                                </div>
+                                <div class="modal-body">
+                                    <ul style="list-style:square; text-align:left;">
+                                        <li>Cloud Computing Architecture</li>
+                                        <li>Standards</li>
+                                        <li>Portability</li>
+                                        <li>Interoperability</li>
+                                        <li>Delivery Models</li>
+                                        <li>Public/Private/Hybrid Clouds</li>
+                                        <li>Scalability</li>
+                                        <li>Availability</li>
+                                        <li>Reliability SaaS, PaaS, IaaS</li>
+                                        <li>Semantic Web Technologies</li>
+                                        <li>Web Services</li>
+                                        <li>Service-Oriented Architecture</li>
+                                        <li>Quality of Service</li>
+                                        <li>Troubleshooting and Best Practices</li>
+                                        <li>Security (Hardware/ Software)</li>
+                                        <li>Performance</li>
+                                        <li>Load Balancing</li>
+                                        <li>Autonomic Computing</li>
+                                        <li>Virtualization</li>
+                                        <li>Utility/Grid/Cloud Computing Comparisons</li>
+                                        <li>Scalability/ Availability</li>
+                                        <li>COTS usage</li>
+                                    </ul>
+                                </div>
+                        	</div>
                     </div>
-                    <div class="caption-thumbnail span6">
+                    <div class="caption-thumbnail">
                         <img src="resources/cloud-computing-applications.jpg" />
                         <p>Applications</p>
                     </div>
                 </div>
                 
-                <div class="row">
-                    <div class="caption-thumbnail span6">
+                <div class="centering-row">
+                    <div class="caption-thumbnail">
                         <img src="resources/cloud-computing-management.jpg" />
                         <p>Management</p>
                     </div>
-                    <div class="caption-thumbnail span6">
+                    <div class="caption-thumbnail">
                         <img src="resources/cloud-computing-industry.jpg" />
                         <p>Industry</p>
                     </div>
                 </div>         
             </div>
                 
+            </section>
+            
+            <section>
+            	<p>blah blah blah blah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blah</p>
             </section>
         </article>
     </div>
@@ -115,7 +154,8 @@
 		$('.logo').eq(0).height(logo2Height);
 */		
 </script>
-<script src="js/bootstrap/bootstrap-affix.js" />
+<script src="js/bootstrap/bootstrap-affix.js"></script>
+<script src="js/bootstrap/bootstrap-modal.js"></script>
 </body>
 
 </html>
