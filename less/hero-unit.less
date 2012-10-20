@@ -52,10 +52,17 @@
     color: @heroUnitLeadColor;
   }
   
-  .btn-primary
+  #registerButton
   {
-    .buttonBackground(@neutralColor, spin(@neutralColor, 20%));
+    .buttonBackground(@neutralColor, spin(@neutralColor, 20%), @black, 0 0 1px rgba(0,0,0,.6));
+    .transition(box-shadow 4s linear);
     margin-top: 40px;
     width: 100px;
+  }
+  
+  #registerButton:hover
+  {
+    .buttonBackground(lighten(@black, 10%), @black, @white, 0 0 1px rgba(255,255,255,.6));
+    .box-shadow(0 0 1px 2px lighten(@baseColor, 20%));
   }
 }
