@@ -149,15 +149,16 @@
 <script src="js/bootstrap/bootstrap-modal.js"></script>
 <script src="js/bootstrap/bootstrap-scrollspy.js"></script>
 <script type="text/javascript">
-
-/*
-	var logo1Height = $('.logo').eq(0).height();
-	var logo2Height = $('.logo').eq(1).height();
-	if( logo1Height > logo2Height )
-		$('.logo').eq(1).height(logo1Height);
-	if( logo2Height > logo1Height )
-		$('.logo').eq(0).height(logo2Height);
-*/		
+ $('.caption-thumbnail').hover
+ (
+ 	function()
+	{
+		$(this).animate
+		(
+			{ heiaght: "4px" }, 200  
+		);	
+	}
+ );
 </script>
 </body>
 
