@@ -42,7 +42,28 @@
                         <h3>8th to 10th December 2012, Dubai, UAE</h3>
                         
                         <div style="margin-left:auto; margin-right:auto; width:130px">
-                            <a id="registerButton" class="btn">Register!</a>
+                            <a href="#registrationModal" id="registerButton" class="btn" role="button" data-toggle="modal">Register!</a>
+                            
+                            <div class="modal hide fade" id="registrationModal">
+                            	<div class="modal-header">
+                                	<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                    <h3 style="color:black">Registration</h3>
+                                </div>
+                                
+                                <div class="modal-body">
+                                	<p style="color:black; font-size:14px;">Please fill out the following details</p>
+                                    <form class="form-horizontal">
+                                    	<label class="control-label" for="inputName">Name</label>
+                                        <div class="controls">
+                                        	<input type="text" id="inputName" placeholder="Email">
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                	<a href="#" data-dismiss="modal" aria-hidden="true" class="btn">Cancel</a>
+                                    <a href="#" class="btn btn-primary">Submit</a>
+                                </div>
+                            </div>
                         </div>
                     </section>
                 </div>
@@ -149,16 +170,7 @@
 <script src="js/bootstrap/bootstrap-modal.js"></script>
 <script src="js/bootstrap/bootstrap-scrollspy.js"></script>
 <script type="text/javascript">
- $('.caption-thumbnail').hover
- (
- 	function()
-	{
-		$(this).animate
-		(
-			{ heiaght: "4px" }, 200  
-		);	
-	}
- );
+
 </script>
 </body>
 

@@ -181,7 +181,7 @@ nav
 
 #iccctamMainContent
 {
-    .box-shadow(0 0 1px 1px @neutralColor);
+    .box-shadow(0 0 8px 1px lighten(@black, 20%));
     padding: @contentMainPadding;
     
     .caption-thumbnail
@@ -227,10 +227,11 @@ nav
         h1
         {
             display: block;
-            margin: @contentMainPadding ((-@contentMainPadding)-2);
+            margin: @contentMainPadding (-@contentMainPadding);
             padding: 5px;
             text-align: center;
-            border: 1px solid @neutralColor;
+            border-top: 1px solid @neutralColor;
+            border-bottom: 1px solid @neutralColor;
         }
     }
 }
