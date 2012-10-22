@@ -84,6 +84,7 @@ header
     {
         position:relative;
         background-color: lighten(@neutralColor, 8%);
+        
         width: @BITSlogoWidth + @ICCCTAMlogoWidth + @IEEElogoWidth + 6*@logoPaddingLeftRight;
         height: @ICCCTAMlogoHeight + 2*@logoPaddingTopBottom;
         .container-fixed();
@@ -149,7 +150,7 @@ nav
                 border-right: 1px solid @neutralColor;
                 border-left: 1px solid @neutralColor;
                 border-bottom: 1px solid @neutralColor;
-                background-color: lighten(@neutralColor, 5%);
+                background-color: @white;
                 color: @black;
             }
             
@@ -183,6 +184,7 @@ nav
 {
     .box-shadow(0 0 8px 1px lighten(@black, 20%));
     padding: @contentMainPadding;
+    margin-bottom: 30px;
     
     .caption-thumbnail
     {
