@@ -76,47 +76,58 @@ body
 }
 
 //---------------------------------------------------------------------------------------
-header
+#iccctamHeader
 {
     background-color: lighten(@neutralColor, 7%);
     
     .container
     {
-        //position: relative;
+        position: relative;
         background-color: lighten(@neutralColor, 7%);       
-        //width: @BITSlogoWidth + @ICCCTAMlogoWidth + @IEEElogoWidth + 6*@logoPaddingLeftRight;
-        //height: @ICCCTAMlogoHeight + 2*@logoPaddingTopBottom;
         .container-fixed();
     }
     
-    .logo-container .logo
+    .logo
     {
-        display: block;
+        display: inline-block;
         padding: @logoPaddingTopBottom @logoPaddingLeftRight;
+        line-height: @ICCCTAMlogoHeight;
+        text-align: center;
+        
+        img
+        {
+            display: inline-block;   
+        }
+    }
+    
+    .logo:first-child
+    {
+        padding-left: 0;
+        text-align: left;
+    }
+    
+    .logo:last-child
+    {
+        padding-right: 0;
+        text-align: right;
     }
     
 }
 
 #bitsLogo
 {
-    //.vertical-align-block-middle(@BITSlogoHeight+@logoPaddingTopBottom); 
-    //left: -20px; //for centering iccctam to page
     height: @BITSlogoHeight;
     width: @BITSlogoWidth;
 }
 
 #iccctamLogo
 {
-    //.vertical-align-block-middle(@ICCCTAMlogoHeight+@logoPaddingTopBottom);
-    //left: @BITSlogoWidth + 2*@logoPaddingLeftRight;
     height: @ICCCTAMlogoHeight;
     width: @ICCCTAMlogoWidth;
 }
 
 #ieeeLogo
 {
-    //.vertical-align-block-middle(@IEEElogoHeight+@logoPaddingTopBottom);
-    //left: @BITSlogoWidth + @ICCCTAMlogoWidth + 4*@logoPaddingLeftRight + 16px;
     height: @IEEElogoHeight;
     width: @IEEElogoWidth;
 }
@@ -157,8 +168,6 @@ header
                 background-color: darken(@baseColor, 5%);
                 color: @white;
                 text-decoration: none;
-                //.box-shadow(0 0 4px 1px lighten(@baseColor, 10%));
-                //border: 1px solid @baseColor;
             }
         }
             
@@ -169,8 +178,6 @@ header
                 background-color: darken(@baseColor, 5%);
                 color: @white;
                 text-decoration: none;
-                //.box-shadow(inset 0 0 4px 1px lighten(@baseColor, 10%));
-                //border: 1px solid @baseColor;
             }
         }
         
@@ -190,18 +197,23 @@ header
             }
         }
     }
+    
+    &.affix
+    {
+          top: 30px;   
+    }
 }
 
 #iccctamContent
 {
-    width: @BITSlogoWidth + @ICCCTAMlogoWidth + @IEEElogoWidth + 6*@logoPaddingLeftRight;
 }
 
 #iccctamMainContent
 {
     .box-shadow(0 0 10px 2px lighten(@black, 20%));
     padding: @contentMainPadding;
-    margin-bottom: 30px;
+    margin: 0 15px 30px 15px;
+    text-align: center;
     
     .caption-thumbnail
     {

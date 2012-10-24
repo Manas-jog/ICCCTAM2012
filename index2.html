@@ -17,11 +17,23 @@
 
 <body data-spy="scroll" data-target="#iccctamNav" data-offset="100">
 
-	<header>
-    	<div class="container row">
-                <img class="logo span4" id="bitsLogo" src="resources/BITS_logo.png"  />               
-                <img class="logo span5" id="iccctamLogo" src="resources/iccctamlogo.gif" />
-                <img class="logo span3" id="ieeeLogo" src="resources/200px-IEEE_logo.svg.png" />       
+	<header id="iccctamHeader">
+    	<div class="container">
+        
+            <div class="row-fluid">
+                <div class="logo span4">
+                    <img id="bitsLogo" src="resources/BITS_logo.png"  />
+                </div>
+                
+                <div class="logo span5">
+                    <img id="iccctamLogo" src="resources/iccctamlogo.gif" />
+                </div>
+                
+                <div class="logo span3">
+                    <img id="ieeeLogo" src="resources/200px-IEEE_logo.svg.png" /> 
+                </div>            
+             </div>
+         
          </div>
     </header>
 
@@ -29,15 +41,17 @@
     	<div class="texturize" >
             <div class="container">
                 <div class="row-fluid">
-                    <section class="span5">
-                        <iframe width="540" height="315" src="http://www.youtube.com/embed/ae_DKNwK_ms?hl=en_US;rel=0&wmode=transparent;showinfo=0;controls=1" frameborder="0" allowfullscreen></iframe>
+                    <section class="span6" style="text-align:center;">
+                        <iframe style="display:inline-block; height:330px; width:90%;" src="http://www.youtube.com/embed/ae_DKNwK_ms?hl=en_US;rel=0&wmode=transparent;showinfo=0;controls=1" frameborder="0" allowfullscreen></iframe>
                     </section>
-                    <section class="pull-right span5">
-                        <h2>International Conference on Cloud Computing Technologies, Application and Management 2012</h2>
-                        <h3>8th to 10th December 2012, Dubai, UAE</h3>
-                        
-                        <div style="margin-left:auto; margin-right:auto; width:130px">
-                            <a href="#registrationModal" id="registerButton" class="btn" role="button" data-toggle="modal">Register!</a>
+                    <section class="span6 pull-right" style="display:inline-block; line-height:350px;">
+                    	<div style="display:inline-block; height:230px; vertical-align:middle">
+                            <h2>International Conference on Cloud Computing Technologies, Application and Management 2012</h2>
+                            <h3>8th to 10th December 2012, Dubai, UAE</h3>
+                            
+                            <div style="margin-left:auto; margin-right:auto; width:130px; line-height:20px;">
+                                <a href="#registrationModal" id="registerButton" class="btn" role="button" data-toggle="modal">Register!</a>
+                            </div>
                         </div>
                     </section>
                 </div>
@@ -48,7 +62,7 @@
     <div style="background-image:url(css/background-logos.jpg); background-repeat:repeat;">
     <div class="container" id="iccctamContent">
     <div class="row-fluid">
-        <nav class="span3">
+        <nav class="span2">
             <div id="iccctamNav" style="min-height:1px;" class="affix-top" data-spy="affix" data-offset-top="606">
                 <ul class="nav">
                     <li class="active"><a href="#conferenceOverview">Conference Overview</a></li>
@@ -65,7 +79,7 @@
             </div>
         </nav>
         
-        <article class="span9" id="iccctamMainContent" style="background:#FFFFFF">
+        <article class="span10" id="iccctamMainContent" style="background:#FFFFFF">
             <section id="conferenceOverview">
                 <h1>Conference Overview</h1>
                 <p>There has been a rapid growth in adopting the cloud computing strategy; however it is still in its infancy in providing its full potential to the users. This is because, while the technology that enables cloud computing seems fairly mature, there are challenges related to security, manageability, administration, pricing/billing for the services offered by the cloud.
@@ -249,7 +263,7 @@ International Conference on Cloud Computing Technologies, Applications and Manag
             
             <section id="venue">
             	<h1>Venue</h1>
-                <img class="centering-row thumbnail" width="745" src="resources/BPD-main-block.jpg" />
+                <img class="thumbnail" width="745" src="resources/BPD-main-block.jpg" style="display:inline-block;" />
                 <hr>
                 <p>
 Birla Institute of Technology and Science, Pilani (BITS Pilani), is an internationally reputed and number one private deemed university in India for higher education. It established BITS Pilani, Dubai Campus in the year 2000, to provide opportunities for quality higher education to youth in UAE and neighboring countries.</p>
@@ -281,7 +295,7 @@ Birla Institute of Technology and Science, Pilani (BITS Pilani), is an internati
     </div>
     </div>
     
-    <div class="modal hide fade" id="registrationModal">
+    <div class="modal hide" id="registrationModal">
         <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
             <h3>Registration</h3>
