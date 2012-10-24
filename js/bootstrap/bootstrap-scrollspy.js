@@ -66,6 +66,8 @@
             self.offsets.push(this[0])
             self.targets.push(this[1])
           })
+		  
+		 console.log('targets acquired:' + $targets)
       }
 
     , process: function () {
@@ -91,15 +93,15 @@
       }
 
     , activate: function (target) {
-        var active
+		var active
           , selector
-
-        this.activeTarget = target
+        
+		this.activeTarget = target
 
         $(this.selector)
           .parent('.active')
           .removeClass('active')
-
+		
         selector = this.selector
           + '[data-target="' + target + '"],'
           + this.selector + '[href="' + target + '"]'

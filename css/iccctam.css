@@ -818,10 +818,11 @@ header .logo-container .logo{display:block;padding:5px 10px;}
 #iccctamLogo{position:absolute;top:50%;margin-top:-80.5px;left:337px;height:156px;width:491px;}
 #ieeeLogo{position:absolute;top:50%;margin-top:-35px;left:848px;height:65px;width:200px;}
 nav{margin-top:30px;}nav ul{width:180px;padding:0;list-style:none;margin:0;}nav ul li{list-style:none;}nav ul li a{display:block;padding:10px 0;font-size:14px;line-height:18px;text-align:center;border-right:1px solid #d6d6d6;border-left:1px solid #d6d6d6;border-bottom:1px solid #d6d6d6;background-color:#ffffff;color:#000000;}
-nav ul li a:hover,nav ul li a.active{background-color:#142c63;color:#ffffff;text-decoration:none;-webkit-box-shadow:inset 0 0 4px 1px #2148a2;-moz-box-shadow:inset 0 0 4px 1px #2148a2;box-shadow:inset 0 0 4px 1px #2148a2;border:1px solid #183578;}
+nav ul li a:hover{background-color:#142c63;color:#ffffff;text-decoration:none;-webkit-box-shadow:inset 0 0 4px 1px #2148a2;-moz-box-shadow:inset 0 0 4px 1px #2148a2;box-shadow:inset 0 0 4px 1px #2148a2;border:1px solid #183578;}
+nav ul li.active a{background-color:#142c63;color:#ffffff;text-decoration:none;-webkit-box-shadow:inset 0 0 4px 1px #2148a2;-moz-box-shadow:inset 0 0 4px 1px #2148a2;box-shadow:inset 0 0 4px 1px #2148a2;border:1px solid #183578;}
 nav ul li:first-child a{-webkit-border-radius:2px;-moz-border-radius:2px;border-radius:2px;border:1px solid #d6d6d6;}
 #iccctamContent{width:1068px;}
 #iccctamMainContent{-webkit-box-shadow:0 0 8px 1px #333333;-moz-box-shadow:0 0 8px 1px #333333;box-shadow:0 0 8px 1px #333333;padding:20px;margin-bottom:30px;}#iccctamMainContent .caption-thumbnail{display:inline-block;margin:20px;position:relative;width:254px;height:174px;-webkit-box-shadow:inset 0 0 4px 1px #d6d6d6;-moz-box-shadow:inset 0 0 4px 1px #d6d6d6;box-shadow:inset 0 0 4px 1px #d6d6d6;-webkit-transition:box-shadow 0.4s;-moz-transition:box-shadow 0.4s;-o-transition:box-shadow 0.4s;transition:box-shadow 0.4s;}#iccctamMainContent .caption-thumbnail img{position:absolute;top:2px;left:2px;width:250px;height:145px;}
 #iccctamMainContent .caption-thumbnail p{display:block;background-color:#d6d6d6;position:absolute;bottom:2px;left:2px;width:250px;height:29px;text-align:center;margin:0;}
 #iccctamMainContent .caption-thumbnail:hover{-webkit-box-shadow:inset 0 0 2px 2px #f89406;-moz-box-shadow:inset 0 0 2px 2px #f89406;box-shadow:inset 0 0 2px 2px #f89406;}
-#iccctamMainContent section h1{display:block;margin:20px -20px;padding:5px;text-align:center;border-top:1px solid #d6d6d6;border-bottom:1px solid #d6d6d6;}
+#iccctamMainContent section h1{display:block;margin:20px -20px;padding:5px;text-align:center;border-bottom:1px solid #f0f0f0;}
