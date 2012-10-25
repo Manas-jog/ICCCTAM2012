@@ -93,6 +93,7 @@
                     <li><a href="#committee">Committee</a></li>                                      
                     <li><a href="#havingFun">Having fun</a></li>                    
                     <li><a href="#sponsors">Sponsors</a></li>
+                    <li><a href="#contactUs">Contact Us</a></li>
                 </ul>
                </div>
             </div>
@@ -239,25 +240,43 @@ International Conference on Cloud Computing Technologies, Applications and Manag
                 
             </section>
 
-            <!--section id="keynoteSpeakers">
+            <section id="keynoteSpeakers">
             	<h1>Keynote Speakers</h1>
-            	
-                <!--div class="carousel slide">
-                	<div class="carousel-inner">
-                    	<div class="item active">
-                            <img src="resources/profileholder.gif" />
-                            <div class="carousel-caption">
-                                <h2>Dr. Eesa M. Bastaki</h2>
-                                <h3>CEO, ICT Fund, Dubai, UAE</h3>
-                            </div>
-                        </div>    
-                    </div>
-                </div>
+                <ul class="thumbnails">
+                	<li class="span3">
+                    	<div class="thumbnail">
+                        	<img src="resources/profileholder.gif" />
+                            <h3>Dr. Eesa M. Bastaki</h3>
+                            <p>CEO, ICT Fund, Dubai, UAE</p>
+                        </div>  
+                    </li>
+                    <li class="span3">
+                    	<div class="thumbnail">
+                        	<img src="resources/profileholder.gif" />
+                            <h3>Prof. Dr. Peter Varman</h3>
+                            <p>Department of Electrical and Computer Engineering, Rice University, Houston, TX, USA</p>
+                        </div>  
+                    </li>
+                    <li class="span3">
+                    	<div class="thumbnail">
+                        	<img src="resources/profileholder.gif" />
+                            <h3>Dr. Ahmed Al Dabbagh</h3>
+                            <p>Technology Development Manager, Ankabut, UAE</p>
+                        </div>  
+                    </li>
+                    <li class="span3">
+                    	<div class="thumbnail">
+                        	<img src="resources/profileholder.gif" />
+                            <h3>Dr. Osman Ahmed</h3>
+                            <p>VP and Head, Centre of Excellence for Smart Buildings at Masdar City, Siemens, Abu Dhabi, UAE</p>
+                        </div>  
+                    </li>
+                </ul>
             </section>
             
             <section id="workshops">
             	<h1>Workshops</h1>
-            </section-->
+            </section>
             
             <section id="importantDates">
             	<h1>Important Dates</h1>
@@ -283,7 +302,7 @@ International Conference on Cloud Computing Technologies, Applications and Manag
             
             <section id="venue">
             	<h1>Venue</h1>
-                <img class="thumbnail" width="745" src="resources/BPD-main-block.jpg" style="display:inline-block;" />
+                <img class="thumbnail" width="650" src="resources/BPD-main-block.jpg" style="display:inline-block;" />
                 <hr>
                 <p>
 Birla Institute of Technology and Science, Pilani (BITS Pilani), is an internationally reputed and number one private deemed university in India for higher education. It established BITS Pilani, Dubai Campus in the year 2000, to provide opportunities for quality higher education to youth in UAE and neighboring countries.</p>
@@ -299,17 +318,43 @@ Birla Institute of Technology and Science, Pilani (BITS Pilani), is an internati
             
             <section id="gettingThere">
             	<h1>Getting There</h1>
-                <div id="iccctamLocation" style="height:500px;">
+                <div id="iccctamLocation" class="thumbnail" style="height:500px;">
                 </div>
             </section>
+            
+            <section id="committee">
+            	<h1>Committee</h1>
+            </section>
+            
+            <section id="havingFun">
+            	<h1>Having fun</h1>
+            </section>
+            
+            <section id="sponsors">
+            	<h1>Sponsors</h1>
+            </section>
+            
+            <section id="contactUs">
+            	<h1>Contact Us</h1>
+            	<div class="pull-right">
+                    	<a href="mailto:ICCCTAM-12@bits-dubai.ac.ae"><img src="resources/mail-icon.png" width="35" height="35"/></a>
+            			<a href="http://www.facebook.com"><img src="resources/Facebook Icon.jpg" width="35" height="35"/></a>
+            			<a href="http://www.twitter.com"><img src="resources/twitter.png" width="35" height="35"/></a>
+                </div> 
+                
+                <h2>ICCCTAM-12 Secretariat</h2>
+                <p>c/o 
+BITS Pilani, Dubai Campus
+Dubai International Academic City
+PO Box 345055
+Dubai, UAE
+Tel:    +971 507225749
+Tel:    +971 554944277
+Fax:   +9714 4200 555
+email: iccctam-12@bits-dubai.ac.ae</p>
+
+            </section>
         </article>
-        
-      	<div class="pull-right">
-        	<p>Contact Us</p>
-            <a href="mailto:ICCCTAM-12@bits-dubai.ac.ae"><img src="resources/mail-icon.png" width="35" height="35"/></a>
-            <a href="http://www.facebook.com"><img src="resources/Facebook Icon.jpg" width="35" height="35"/></a>
-            <a href="http://www.twitter.com"><img src="resources/twitter.png" width="35" height="35"/></a>
-        </div>
     
     </div>
     </div>
@@ -341,6 +386,21 @@ Birla Institute of Technology and Science, Pilani (BITS Pilani), is an internati
 <script src="js/bootstrap/bootstrap-modal.js"></script>
 <script src="js/bootstrap/bootstrap-scrollspy.js"></script>
 <script src="js/bootstrap/bootstrap-collapse.js"></script>
+<script type="text/javascript">
+	$(document).ready
+	(
+		function()
+		{
+			var thumbnailHeights = $('#keynoteSpeakers ul').height();	
+			
+			$('#keynoteSpeakers div.thumbnail').each(function(index, element) {
+                element.height = thumbnailHeights;
+				console.log(element.height);
+            });
+		}
+	);
+</script>
+
 <script src="js/enquire.min.js"></script>
 <script type="text/javascript">
 	enquire.register("screen and (max-width: 767px)",
