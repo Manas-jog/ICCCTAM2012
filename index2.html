@@ -391,11 +391,16 @@ email: iccctam-12@bits-dubai.ac.ae</p>
 	(
 		function()
 		{
-			var thumbnailHeights = $('#keynoteSpeakers ul').height();	
+			var thumbnailHeights = 0;
 			
 			$('#keynoteSpeakers div.thumbnail').each(function(index, element) {
-                element.height = thumbnailHeights;
-				console.log(element.height);
+                	if( thumbnailHeights < $(element).height() )
+						thumbnailHeights = $(element).height();
+				 }
+		    );
+			
+			$('#keynoteSpeakers div.thumbnail').each(function(index, element) {
+                $(element).height(thumbnailHeights)
             });
 		}
 	);
