@@ -67,7 +67,6 @@
             self.targets.push(this[1])
           })
 		  
-		 console.log('targets acquired:' + $targets)
       }
 
     , process: function () {

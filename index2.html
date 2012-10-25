@@ -11,7 +11,12 @@
 	<meta name="description" content="">
 	<link href="css/iccctam.css" rel="stylesheet" type="text/css">
     <link href="css/bootstrap-responsive.css" rel="stylesheet">
-
+	<style>
+		.overflow-fix
+		{
+			overflow:visible;	
+		}
+	</style>
 </head>
 
 
@@ -40,11 +45,11 @@
 	<article class="hero-unit">
     	<div class="texturize" >
             <div class="container">
-                <div class="row-fluid">
+                <div class="row-fluid" style="text-align:center; vertical-align:middle;">
                     <section class="span6" style="text-align:center;">
-                        <iframe style="display:inline-block; height:330px; width:90%;" src="http://www.youtube.com/embed/ae_DKNwK_ms?hl=en_US;rel=0&wmode=transparent;showinfo=0;controls=1" frameborder="0" allowfullscreen></iframe>
+                        <iframe style="display:inline-block; height:300px; width:90%;" src="http://www.youtube.com/embed/ae_DKNwK_ms?hl=en_US;rel=0&wmode=transparent;showinfo=0;controls=1" frameborder="0" allowfullscreen></iframe>
                     </section>
-                    <section class="span6 pull-right" style="display:inline-block; line-height:350px;">
+                    <section class="span6 pull-right" style="display:inline-block; line-height:300px;">
                     	<div style="display:inline-block; height:230px; vertical-align:middle">
                             <h2>International Conference on Cloud Computing Technologies, Application and Management 2012</h2>
                             <h3>8th to 10th December 2012, Dubai, UAE</h3>
@@ -60,12 +65,25 @@
     </article>
     
     <div style="background-image:url(css/background-logos.jpg); background-repeat:repeat;">
-    <div class="container" id="iccctamContent">
+    <div class="container">
     <div class="row-fluid">
-        <nav class="span2">
-            <div id="iccctamNav" style="min-height:1px;" class="affix-top" data-spy="affix" data-offset-top="606">
+        <nav class="span3">
+            <div id="iccctamNav" style="min-height:1px;" class="affix-top navbar" data-spy="affix" data-offset-top="606">
+            <div>
+            
+                <ul class="nav nav-tabs nav-stacked">
+                	<a class="brand" style="">ICCCTAM 2012</a>
+                    
+                    <a class="btn-navbar collapsed" data-toggle="collapse" data-target=".nav-collapse">
+                    	<span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </a>
+                </ul>
+                
+                    <div class="nav-collapse collapse overflow-fix" style="height:0px;">
                 <ul class="nav">
-                    <li class="active"><a href="#conferenceOverview">Conference Overview</a></li>
+                	<li class="active"><a href="#conferenceOverview">Conference Overview</a></li>    
                     <li><a href="#keynoteSpeakers">Keynote Speakers</a></li>                    
                     <li><a href="#workshops">Workshops</a></li>                    
                     <li><a href="#schedule">Schedule</a></li>                    
@@ -76,10 +94,12 @@
                     <li><a href="#havingFun">Having fun</a></li>                    
                     <li><a href="#sponsors">Sponsors</a></li>
                 </ul>
+               </div>
             </div>
+           </div>
         </nav>
         
-        <article class="span10" id="iccctamMainContent" style="background:#FFFFFF">
+        <article class="span9" id="iccctamMainContent" style="background:#FFFFFF">
             <section id="conferenceOverview">
                 <h1>Conference Overview</h1>
                 <p>There has been a rapid growth in adopting the cloud computing strategy; however it is still in its infancy in providing its full potential to the users. This is because, while the technology that enables cloud computing seems fairly mature, there are challenges related to security, manageability, administration, pricing/billing for the services offered by the cloud.
@@ -94,7 +114,7 @@ International Conference on Cloud Computing Technologies, Applications and Manag
                         </a>
                         	<p>Technologies</p>
                         
-                            <div class="modal hide fade" id="modalTechnologies">
+                            <div class="modal hide" id="modalTechnologies">
                                 <div class="modal-header">
                                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                                  <h3>TECHNOLOGIES</h3>
@@ -134,7 +154,7 @@ International Conference on Cloud Computing Technologies, Applications and Manag
                      
                         <p>Applications</p>
                         
-                        <div class="modal hide fade" id="modalApplications">
+                        <div class="modal hide" id="modalApplications">
                                 <div class="modal-header">
                                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                                  <h3>APPLICATIONS</h3>
@@ -167,7 +187,7 @@ International Conference on Cloud Computing Technologies, Applications and Manag
                         </a>
                         <p>Management</p>
                         
-                        <div class="modal hide fade" id="modalManagement">
+                        <div class="modal hide" id="modalManagement">
                                 <div class="modal-header">
                                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                                  <h3>MANAGEMENT</h3>
@@ -202,7 +222,7 @@ International Conference on Cloud Computing Technologies, Applications and Manag
                         <p>Industry</p>
                     </div>
                     
-                    <div class="modal hide fade" id="modalCloudIndustry">
+                    <div class="modal hide" id="modalCloudIndustry">
                                 <div class="modal-header">
                                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                                  <h3>CLOUD COMPUTING INDUSTRY</h3>
@@ -320,6 +340,34 @@ Birla Institute of Technology and Science, Pilani (BITS Pilani), is an internati
 <script src="js/bootstrap/bootstrap-affix.js"></script>
 <script src="js/bootstrap/bootstrap-modal.js"></script>
 <script src="js/bootstrap/bootstrap-scrollspy.js"></script>
+<script src="js/bootstrap/bootstrap-collapse.js"></script>
+<script src="js/enquire.min.js"></script>
+<script type="text/javascript">
+	enquire.register("screen and (max-width: 767px)",
+	{
+		match:
+				function()
+				{
+					var requiredScroll = $('#iccctamHeader').height() + $('.hero-unit').height();
+					$('#iccctamNav').data('offsetTop', requiredScroll);
+					if( typeof( $('#iccctamNav').data('offset') ) != 'undefined' )
+						$('#iccctamNav').data('offset').top = requiredScroll;
+					//$('#iccctamNav .brand').css('display', 'block');	
+				},
+				
+		unmatch:
+				function()
+				{
+					$('#iccctamNav').data('offsetTop',606);
+					if( typeof( $('#iccctamNav').data('offset') ) != 'undefined' )
+						$('#iccctamNav').data('offset').top = 606;
+					//$('#iccctamNav .brand').css('display', 'none');
+				}
+		
+	}
+	).listen(100);
+</script>
+
 <script type="text/javascript">
 
 function initializeMap()
