@@ -310,10 +310,18 @@ html
 }
 
 #committee
-{
+{ 
+    vertical-align: middle;
+    li
+    {
+        display: inline-block;
+        float:none;
+        vertical-align:top;
+    }
     .thumbnail
     {
         padding: 0;
+        margin: 5px 0;
         
         img
         {
@@ -352,6 +360,7 @@ html
 {
     li
     {
+        float: left;
         margin: 10px 5px;
         .thumbnail
         {
@@ -399,6 +408,11 @@ html
         }
 }
 
+#technicalCommittee
+{
+    font-weight: bold;   
+}
+
 #FAQ
 {
     text-align: left;
@@ -413,13 +427,15 @@ html
             
             &:hover
             {   
-                background-color: @neutralColor;
+                background-color: lighten(@neutralColor, 10%);
             }
         }
         
         div.heading-text
         {
-            display: inline-block;   
+            display: inline-block;
+            padding-left: 5px;
+            color: @baseColor;
         }
         p
         {
@@ -428,7 +444,7 @@ html
         .accordion-inner
         {
             border: none;
-            margin: 0 0 0 35px;
+            margin-left: 35px;
         }
      }
 }
