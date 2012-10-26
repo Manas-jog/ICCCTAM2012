@@ -93,7 +93,7 @@
                     <li><a href="#committee">Committee</a></li>  
                     <li><a href="#FAQ">FAQ</a></li>                                    
                     <li><a href="#sightseeing">Sightseeing</a></li>                    
-                    <li><a href="#sponsors">Sponsors</a></li>
+                    <!--li><a href="#sponsors">Sponsors</a></li-->
                     <li><a href="#contactUs">Contact Us</a></li>
                 </ul>
                </div>
@@ -106,7 +106,8 @@
                 <h1>Conference Overview</h1>
                 <p>There has been a rapid growth in adopting the cloud computing strategy; however it is still in its infancy in providing its full potential to the users. This is because, while the technology that enables cloud computing seems fairly mature, there are challenges related to security, manageability, administration, pricing/billing for the services offered by the cloud.
 
-International Conference on Cloud Computing Technologies, Applications and Management 2012 (ICCCTAM-12) will be a platform for academicians, researchers, practitioners and users to discuss challenges in Cloud Computing and share their knowledge in the following four perspectives, but not limited to, thrust areas: </p>
+<strong>International Conference on Cloud Computing Technologies, Applications and Management 2012 (ICCCTAM-12) will be a platform for academicians, researchers, practitioners and users to discuss challenges in Cloud Computing and share their knowledge in the following four perspectives, but not limited to, thrust areas</strong>: </p>
+				<em>(Click on the images for topics covered)</em>
                 
             <div>
             	<div class="centering-row">
@@ -236,7 +237,7 @@ International Conference on Cloud Computing Technologies, Applications and Manag
                     
                 </div>
                 
-                <p>Students’ Poster Session is to recognize excellence in projects relating to cloud computing and applications.</p>         
+                <p><strong>Students’ Poster Session</strong> is to recognize excellence in projects relating to cloud computing and applications.</p>         
             </div>
                 
             </section>
@@ -567,9 +568,9 @@ Birla Institute of Technology and Science, Pilani (BITS Pilani), is an internati
                 
             </section>
             
-            <section id="sponsors">
+            <!--section id="sponsors">
             	<h1>Sponsors</h1>
-            </section>
+            </section-->
             
             <section id="contactUs">
             	<h1>Contact Us</h1>
@@ -619,21 +620,83 @@ Fax:   +9714 4200 555<br>
         </div>
         
         <div class="modal-body">
-            <p>Please fill out the following details</p>
+            <h4>Fee Structure</h4>
+            <table class="table table-bordered table-striped table-condensed">
+            	<tr>
+                	<th></th>
+                    <th>Normal Registration Fee</th>
+                    <th>Early Bird Registration(by 30th Oct. 2012</th>
+                </tr>
+                
+                <tr>
+                	<td>Students/Research Scholars</td>
+                    <td>$200</td>
+                    <td>$100</td>
+                </tr>
+                
+                <tr>
+                	<td>Faculty from Academic Institutions</td>
+                    <td>$300</td>
+                    <td>$200</td>
+                </tr>
+                
+                <tr>
+                	<td>Other Delegates</td>
+                    <td>$400</td>
+                    <td>$300</td>
+                </tr>
+            </table>
+            
+            <hr>
+            
+            <p>The registration also covers the cost of:</p>
+            <ul>
+            	<li>Food, etc..</li>
+            </ul>
+            <p>Fill out the following details to register</p>
+            <hr>
             <form class="form-horizontal">
-                <label class="control-label" for="inputName">Name</label>
-                <div class="controls">
-                    <input type="text" id="inputName" placeholder="Email">
+            	<div class="control-group error">
+                	<label class="control-label" for="inputName">Name</label>
+                	<div class="controls">
+                    	<input type="text" name="inputName" id="inputName"  class="input-medium" placeholder="Mr. Smith" required >
+                	</div>
                 </div>
+                
+                <div class="control-group">
+                	<label class="control-label" for="inputSex">Sex</label>
+                	<div class="controls">
+                    	<select class="input-medium" id="inputSex" name="inputSex">
+                    		<option value="Male">Male</option>
+         	                <option value="Female">Female</option>
+                   		</select>
+                	</div>
+				</div>
+                
+                <div class="control-group">
+                	<label class="control-label" for="inputNameTag">Preferred Name Tag Details</label>
+                	<div class="controls">
+                    	<select class="input-medium" id="inputNameTag" name="inputNameTag">
+                    		<option value="Mr.">Mr.</option>
+         	                <option value="Mrs.">Mrs.</option>
+                            <option value="Miss">Miss</option>
+                            <option value="Prof.">Prof.</option>
+                            <option value="Dr.">Dr.</option>
+                   		</select>
+                	</div>
+				</div>         
+            
             </form>
+            
         </div>
         <div class="modal-footer">
             <a href="#" data-dismiss="modal" aria-hidden="true" class="btn">Cancel</a>
-            <a href="#" class="btn btn-primary">Submit</a>
+            <a href="#" class="btn btn-primary">Buy</a>
         </div>
    </div>
 <!--placed at the end for faster page loading-->
 <script src="js/jquery.js"></script>
+<script src="js/jquery.validate.js"></script>
 <script src="js/bootstrap/bootstrap-affix.js"></script>
 <script src="js/bootstrap/bootstrap-modal.js"></script>
 <script src="js/bootstrap/bootstrap-scrollspy.js"></script>
@@ -676,6 +739,9 @@ function equalizeHeights(selector)
 					$('#iccctamNav').data('offsetTop', requiredScroll);
 					if( typeof( $('#iccctamNav').data('offset') ) != 'undefined' )
 						$('#iccctamNav').data('offset').top = requiredScroll;
+					$('#keynoteSpeakers div.thumbnail, #advisoryCommittee div.thumbnail, #mainCommittee div.thumbnail').each(function(index, element) {
+						$(element).height("auto");
+                    });
 				},
 				
 		unmatch:
@@ -684,10 +750,13 @@ function equalizeHeights(selector)
 					$('#iccctamNav').data('offsetTop',606);
 					if( typeof( $('#iccctamNav').data('offset') ) != 'undefined' )
 						$('#iccctamNav').data('offset').top = 606;
+					equalizeHeights('#keynoteSpeakers div.thumbnail');
+			equalizeHeights('#advisoryCommittee div.thumbnail');
+			equalizeHeights('#mainCommittee div.thumbnail');
 				}
 		
 	}
-	).listen(100);
+	).listen(200);
 </script>
 
 <script type="text/javascript">
