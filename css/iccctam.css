@@ -812,11 +812,11 @@ html{min-height:100%;}
 .centering-row{display:block;text-align:center;}
 #iccctamHeader{background-color:#e8e8e8;}#iccctamHeader .container{position:relative;background-color:#e8e8e8;margin-right:auto;margin-left:auto;*zoom:1;}#iccctamHeader .container:before,#iccctamHeader .container:after{display:table;content:"";line-height:0;}
 #iccctamHeader .container:after{clear:both;}
-#iccctamHeader .logo{display:inline-block;padding:5px 10px;line-height:160px;text-align:center;}#iccctamHeader .logo img{display:inline-block;}
+#iccctamHeader .logo{display:inline-block;padding:5px 10px;line-height:110px;text-align:center;}#iccctamHeader .logo img{display:inline-block;}
 #iccctamHeader .logo:first-child{padding-left:0;text-align:left;}
 #iccctamHeader .logo:last-child{padding-right:0;text-align:right;}
 #bitsLogo{height:85px;width:268px;}
-#iccctamLogo{height:160px;width:420px;}
+#iccctamLogo{height:110px;width:285px;}
 #ieeeLogo{height:50px;width:165px;}
 #iccctamNav{margin-top:30px;}#iccctamNav a.brand{display:none;}
 #iccctamNav ul.nav{padding:0;margin:0;width:183px;border-style:none;}#iccctamNav ul.nav li{list-style:none;}#iccctamNav ul.nav li>a{display:block;padding:10px;width:161px;font-size:14px;line-height:18px;text-align:center;background-color:#ffffff;color:#183578;-webkit-box-shadow:0 0 3px 0px #000000;-moz-box-shadow:0 0 3px 0px #000000;box-shadow:0 0 3px 0px #000000;-webkit-transition:all 0.2s;-moz-transition:all 0.2s;-o-transition:all 0.2s;transition:all 0.2s;}
