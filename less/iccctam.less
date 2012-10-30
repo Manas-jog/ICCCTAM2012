@@ -150,6 +150,7 @@ html
             
             > a
             {
+                border-collapse: seperate; //IE9
                 display: block;
                 padding: 10px;
                 width: @navWidth - 2*10px + 1px;
@@ -205,7 +206,10 @@ html
     }
 }
 
-
+#iccctamContent
+{
+    background-color: darken(@neutralColor, 20%);  
+}
 #iccctamMainContent
 {
     .box-shadow(0 0 10px 2px lighten(@black, 20%));
@@ -429,19 +433,18 @@ html
             &:hover
             {   
                 background-color: lighten(@neutralColor, 10%);
+                text-decoration:none;
             }
         }
         
-        div.heading-text
+        p.heading-text
         {
-            display: inline-block;
-            padding-left: 5px;
+            display: inline;
+            text-indent: 5px;
+            font-weight: bold;
             color: @baseColor;
         }
-        p
-        {
-            font-weight: bold;
-        }
+        
         .accordion-inner
         {
             border: none;
@@ -485,6 +488,12 @@ html
 {
     text-align: left;   
 }
+
+#gettingThere iframe
+{
+    width: 80%;   
+}
+    
 //----------------------------------------------------------------------------
 //iccctam specific responsive behaviours
 
@@ -511,7 +520,6 @@ html
         }
      }
 
-    
     #iccctamNav
     {
         z-index: 10;
@@ -529,7 +537,7 @@ html
             .box-shadow(0 0 5px 2px @orange);   
             cursor: pointer;
             margin-top: 5px;
-            
+            padding: 8px 20px;
             span
             {
                 pointer-events: none;   
@@ -545,6 +553,7 @@ html
         {
             width: 100%;
             min-width: 448px;
+            padding: 5px 0;
             #gradient > .vertical(@neutralColor, darken(@neutralColor, 5%));
             .box-shadow(0 0 5px 1px @black);
             
@@ -580,6 +589,33 @@ html
     {
         padding-top: 0;
         margin-top: -10px;
+    }
+    
+    #gettingThere iframe
+    {
+        width: 80%;   
+    }
+    
+    #committee, #advisoryCommittee
+    {
+           ul.thumbnails
+           {
+                li
+                {
+                    width: 100%;
+                    display:block;
+                    margin: 0 auto;
+                }
+           }
+    }
+    
+    #sightseeing
+    {
+        div.thumbnail img
+        {
+            display:block;   
+            margin: 0 auto;
+        }
     }
 }
 
