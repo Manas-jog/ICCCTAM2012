@@ -208,14 +208,15 @@ html
 
 #iccctamContent
 {
-    background-color: darken(@neutralColor, 20%);  
+    background-color: #EEE;  
 }
 #iccctamMainContent
 {
-    .box-shadow(0 0 10px 2px lighten(@black, 20%));
+    border: 1px solid #CCC;
     padding: @contentMainPadding;
     text-align: center;
     margin-bottom: 10px;
+    
     .caption-thumbnail
     {
         display: inline-block;
@@ -497,6 +498,15 @@ html
 //----------------------------------------------------------------------------
 //iccctam specific responsive behaviours
 
+@media (min-width: 768px) and (max-width: 979px)
+{
+    #bitsLogo
+    {
+        width: auto;
+        height: auto;
+    }
+}
+
 @media (max-width: 767px)
 {
     html
@@ -552,7 +562,6 @@ html
         ul.nav
         {
             width: 100%;
-            min-width: 448px;
             padding: 5px 0;
             #gradient > .vertical(@neutralColor, darken(@neutralColor, 5%));
             .box-shadow(0 0 5px 1px @black);
@@ -580,8 +589,9 @@ html
         &.affix
         {
             top:0;
-            
-            ul.nav { width: 97%; } //will be fixed later
+            left: 0;
+            right: 0;
+            ul.nav { width: 100%; }
         }
     }
     
@@ -617,6 +627,90 @@ html
             margin: 0 auto;
         }
     }
+}
+
+@media (max-width: 480px)
+{
+    html
+    {
+        min-width: 320px;   
+    }
+    body
+    {
+        padding: 0;   
+    }
+    
+    #iccctamMainContent .caption-thumbnail
+    {
+        display: block;
+        margin: 20px;
+        position:static;
+        width: auto;
+        height: auto;
+        .box-shadow(0 0 5px 0px lighten(@black, 5%));
+        .transition(box-shadow 0.4s);
+        
+        img, p
+        {
+            position: static;
+            width: auto;
+            height: auto;
+        }
+
+        
+        &:hover
+        {
+            .box-shadow(0 0 5px 1px @orange);
+        }
+    }
+
+}
+
+
+@media (min-width: 1260px)
+{
+    #iccctamContent > .container, #iccctamHeader > .container, .hero-unit .texturize .container
+    {
+        width: 75%;   
+    }
+    
+    #bitsLogo, #iccctamLogo, #ieeeLogo
+    {
+        height: auto;
+        width: auto;
+    }
+}
+
+//------Mixin for navigation------
+.set-iccctam-nav-width(@navWidth)
+{
+     #iccctamNav
+    {
+        ul.nav
+        {
+            width: @navWidth + 3px;
+       
+            li
+            {
+                > a
+                {
+                    width: @navWidth - 2*10px + 1px;
+                }
+            }
+        }
+    }
+}
+
+//-------------------end of mixin------------
+
+@media (min-width: 1440px) and (max-width: 1620px)
+{
+    .set-iccctam-nav-width(@navWidth1441_1620);
+}
+
+@media (min-width: 1621px) and (max-width: 1921)
+{
+    .set-iccctam-nav-width(@navWidth1621_1920);
 }
 
 

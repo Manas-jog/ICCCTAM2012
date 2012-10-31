@@ -116,7 +116,7 @@
                     <iframe style="display:inline-block; height:300px; width:90%;" src="http://www.youtube.com/embed/ae_DKNwK_ms?hl=en_US;rel=0&wmode=transparent;showinfo=0;controls=1" frameborder="0" allowfullscreen></iframe>
                 </section>
                 <section class="span6 pull-right" style="display:inline-block; line-height:300px;">
-                   <div style="display:inline-block; height:230px; vertical-align:middle">
+                   <div style="display:inline-block; vertical-align:middle">
                     <h2>International Conference on Cloud Computing Technologies, Application and Management 2012</h2>
                     <h3>8th to 10th December 2012, Dubai, UAE</h3>
 
@@ -797,10 +797,16 @@
          $('#iccctamMainContent').click(
             function()
             {
-                console.log('nav!');
                 $('#iccctamNav div.nav-collapse').collapse('hide');
             }
          );
+
+         $('#iccctamNav ul.nav li > a').click(
+            function()
+            {
+                $('#iccctamNav div.nav-collapse').collapse('hide');
+            }
+          )
      }
      );
     </script>
