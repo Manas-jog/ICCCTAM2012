@@ -1,0 +1,57 @@
+
+
+#iccctamHeader
+{
+    background-color: lighten(@neutralColor, 7%);
+    
+    .container
+    {
+        position: relative;
+        background-color: lighten(@neutralColor, 7%);       
+        .container-fixed();
+    }
+    
+    .logo
+    {
+        display: inline-block;
+        padding: @logoPaddingTopBottom @logoPaddingLeftRight;
+        line-height: @ICCCTAMlogoHeight;
+        text-align: center;
+        
+        img
+        {
+            display: inline-block;   
+        }
+    }
+    
+    .logo:first-child
+    {
+        padding-left: 0;
+        text-align: left;
+    }
+    
+    .logo:last-child
+    {
+        padding-right: 0;
+        text-align: right;
+    }
+    
+}
+
+#bitsLogo
+{
+    height: @BITSlogoHeight;
+    width: @BITSlogoWidth;
+}
+
+#iccctamLogo
+{
+    height: @ICCCTAMlogoHeight;
+    width: @ICCCTAMlogoWidth;
+}
+
+#ieeeLogo
+{
+    height: @IEEElogoHeight;
+    width: @IEEElogoWidth;
+}

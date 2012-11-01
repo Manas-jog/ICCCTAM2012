@@ -1,0 +1,34 @@
+#FAQ
+{
+    text-align: left;
+     .accordion-group
+     {
+        border: none;   
+        
+        .accordion-toggle
+        {
+            display: inline-block;
+            .transition(all 0.2s);
+            
+            &:hover
+            {   
+                background-color: lighten(@neutralColor, 10%);
+                text-decoration:none;
+            }
+        }
+        
+        p.heading-text
+        {
+            display: inline;
+            text-indent: 5px;
+            font-weight: bold;
+            color: @baseColor;
+        }
+        
+        .accordion-inner
+        {
+            border: none;
+            margin-left: 35px;
+        }
+     }
+}

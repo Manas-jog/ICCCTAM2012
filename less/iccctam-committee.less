@@ -1,0 +1,107 @@
+#committee
+{ 
+    vertical-align: middle;
+    li
+    {
+        display: inline-block;
+        float:none;
+        vertical-align:top;
+    }
+    .thumbnail
+    {
+        padding: 0;
+        margin: 5px 0;
+        border: none;
+        .box-shadow(none);
+        
+        img
+        {
+            width: 150px;
+            height: 150px;
+        }
+        h1
+        {
+            margin: 0;
+            padding: 5px;
+            background-image: none;
+            background-color: @white;
+            font-size: 24px;
+            line-height: 30px;
+            .box-shadow(none);
+            color: @black;
+        }
+        
+        h2
+        {
+            margin:0;
+            padding: 5px;
+            //#gradient > .vertical(lighten(@neutralColor, 4%), @neutralColor);
+            font-size: 18px;
+            line-height: 20px;
+        }
+        
+        h3
+        {
+            font-size: 14px;
+            line-height: 16px;
+        }
+    }
+}
+
+#advisoryCommittee
+{
+    li
+    {
+        display: inline-block;
+        float: none;
+        margin: 10px 10px;
+        .thumbnail
+        {
+            img
+            {
+                width: 150px;
+                height: 150px;
+            }
+            h1
+            {
+                font-size: 18px;
+                line-height: 20px;
+            }
+            h2
+            {
+                font-size: 14px;
+                line-height: 16px;
+                background-image: none;
+                background-color: @white;
+            }    
+        }
+    }
+}
+#technicalCommittee, #organizingCommittee
+{
+        list-style: none;
+        text-align: left;
+        margin: 0;
+        border: solid @neutralColor;
+        border-width: 0 1px 0 1px;
+        
+        li
+        {
+            display: block;
+            padding: 5px;
+        }
+        li:nth-child(even)
+        {
+            background-color: lighten(@neutralColor, 12%);   
+        }
+        li:nth-child(odd)
+        {
+            border-top: 1px solid @neutralColor;
+            border-bottom: 1px solid @neutralColor;
+        }
+}
+
+#technicalCommittee
+{
+    font-weight: bold;   
+}
