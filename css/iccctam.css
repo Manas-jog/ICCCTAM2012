@@ -707,7 +707,7 @@ html{min-height:100%;}
 #keynoteSpeakers .thumbnail p{padding:0 5px;}
 #committee{vertical-align:middle;}#committee li{display:inline-block;float:none;vertical-align:top;}
 #committee .thumbnail{padding:0;margin:5px 0;border:none;-webkit-box-shadow:none;-moz-box-shadow:none;box-shadow:none;}#committee .thumbnail img{width:150px;height:150px;}
-#committee .thumbnail h1{margin:0;padding:5px;background-image:none;background-color:#ffffff;font-size:24px;line-height:30px;-webkit-box-shadow:none;-moz-box-shadow:none;box-shadow:none;color:#000000;}
+#committee .thumbnail h1{margin:0;padding:5px;background-image:none;background-color:#ffffff;-ms-filter:"progid:DXImageTransform.Microsoft.gradient(enabled=false)";font-size:24px;line-height:30px;-webkit-box-shadow:none;-moz-box-shadow:none;box-shadow:none;color:#000000;}
 #committee .thumbnail h2{margin:0;padding:5px;font-size:18px;line-height:20px;}
 #committee .thumbnail h3{font-size:14px;line-height:16px;}
 #advisoryCommittee li{display:inline-block;float:none;margin:10px 10px;}#advisoryCommittee li .thumbnail img{width:150px;height:150px;}
