@@ -6,7 +6,7 @@
     	
     	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
     	<meta charset="utf-8">
-    	<meta name="viewport" content="width=device-width, initial-scale=1.0 height=device=500px">
+    	<meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>ICCCTAM 2012</title>
         <meta name="description" content="">
         <link href="css/iccctam.css" rel="stylesheet" type="text/css">
@@ -319,7 +319,7 @@
                    <a href="#eesaBastakiInfo" role="button" data-toggle="modal">Details</a>
                </div>
 
-               <div class="modal hide" id="eesaBastakiInfo">
+               <div class="modal hide has-footer" id="eesaBastakiInfo">
                   <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                     <h3>Dr. Eesa M. Bastaki</h3>
@@ -347,7 +347,7 @@
                    <a href="#peterVarmanInfo" role="button" data-toggle="modal">Details</a>
                </div>  
 
-               <div class="modal hide" id="peterVarmanInfo">
+               <div class="modal hide has-footer" id="peterVarmanInfo">
                   <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                     <h3>Prof. Dr. Peter Varman</h3>
@@ -373,7 +373,7 @@
                    <a href="#ahmedDabbaghInfo" role="button" data-toggle="modal">Details</a>
                </div>
 
-               <div class="modal hide" id="ahmedDabbaghInfo">
+               <div class="modal hide has-footer" id="ahmedDabbaghInfo">
                   <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                     <h3>Dr. Ahmed Al Dabbagh</h3>
@@ -408,7 +408,7 @@
                    <a href="#osmanAhmedInfo" role="button" data-toggle="modal">Details</a>
                </div>
 
-               <div class="modal hide" id="osmanAhmedInfo">
+               <div class="modal hide has-footer" id="osmanAhmedInfo">
                   <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                     <h3>Dr. Osman Ahmed</h3>
@@ -794,7 +794,7 @@
     </div>
     </div>
 
-    <div class="modal hide" id="registrationModal">
+    <div class="modal hide has-footer" id="registrationModal">
         <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
             <h3>Registration</h3>
@@ -894,7 +894,7 @@
             {
                 $('#iccctamNav div.nav-collapse').collapse('hide');
             }
-         );
+         )
 
          $('#iccctamNav ul.nav li > a').click(
             function()
@@ -902,8 +902,9 @@
                 $('#iccctamNav div.nav-collapse').collapse('hide');
             }
           )
-     }
-     );
+
+       }
+    )
     </script>
 
     <script src="js/enquire.min.js"></script>
