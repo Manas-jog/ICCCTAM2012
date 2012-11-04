@@ -79,6 +79,10 @@ html
 @import "iccctam-responsive-tablets.less";
 //-----------------------------------------------------------------------------------------
 
+#iccctamBody
+{
+    padding: 0;   
+}
 
 #iccctamContent
 {
@@ -140,16 +144,22 @@ html
             margin: (@contentMainPadding + 10px) (-@contentMainPadding);
             padding: 5px;
             text-align: center;
-            #gradient > .vertical(@baseColor, darken(@baseColor, 10%));
-            color: @white;
+            border-top: 1px solid #CCC;
+            border-bottom: 1px solid #CCC;
+            background-color: #EEE;
+            color: @black;
             text-shadow: 0 0 1px 1px @white;
-            .box-shadow(0 0 3px 1px @black);
         }
         
         h2
         {
             font-size: 0.80 * @titleSize;
             line-height: 0.80 * @titleSize + 2px;
+        }
+        
+        p
+        {
+            text-align: left;   
         }
     }
     
@@ -216,7 +226,8 @@ html
     
     iframe
     {
-       width: 80%;
+       width: 100%;
+       height: 250px;
     }
 
 }

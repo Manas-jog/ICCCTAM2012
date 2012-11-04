@@ -11,7 +11,7 @@
         .logo, .logo:first-child, .logo:last-child
         {
             display: block;
-            width: 100%;
+            line-height: 70px;
             text-align: center;
         }  
         img
@@ -19,6 +19,7 @@
             display: inline-block;
             margin: auto;
         }
+        
      }
 
     #iccctamNav
@@ -119,6 +120,10 @@
         }
     }
     
+    #keynoteSpeakers
+    {
+        text-align: center;   
+    }
 }
 
 
@@ -132,7 +137,22 @@
     {
         padding: 0;   
     }
+
+    #bitsLogo, #iccctamLogo
+        {
+            width: auto;
+            height: 70px;
+        }
+    #ieeeLogo
+    {
+        width: auto;
+        height: 50px;
+    }
     
+    .hero-unit .texturize
+    {
+        padding: 10px;   
+    }
     #iccctamMainContent .caption-thumbnail
     {
         display: block;
@@ -172,7 +192,7 @@
 
 // media queries for modal in lower heights
 
-@media  (max-height:560px)
+@media  (max-height:560px) and (max-width: 480px)
 {
     .modal
     {
