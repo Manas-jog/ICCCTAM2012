@@ -96,44 +96,23 @@ html
     text-align: center;
     margin-bottom: 10px;
     
-    .caption-thumbnail
+    #accordionTopicList
     {
-        display: inline-block;
-        margin: 20px;
-        position:relative;
-        width: @thumbnailCaptionWidth;
-        height: @thumbnailCaptionHeight;
-        .box-shadow(0 0 5px 0px lighten(@black, 5%));
-        .transition(box-shadow 0.4s);
-        
-        img
+        .accordion-heading
         {
-            position: absolute;
-            top:0;
-            left:0;
-            width: @thumbnailCaptionWidth;
-            height: @thumbnailImageHeight;
-        }
+            #gradient > .vertical(lighten(@neutralColor, 10%), @neutralColor);
+            a
+            {
+                color: @black;
+                text-align: left;
+            }
+        }   
         
-        p
+        .accordion-inner
         {
-            display:block;
-            background-color: @neutralColor;
-            position:absolute;
-            bottom:0;
-            left:0;
-            width: @thumbnailCaptionWidth;
-            height: @thumbnailTextHeight;
-            text-align:center;
-            margin:0;
-        }
-        
-        &:hover
-        {
-            .box-shadow(0 0 5px 1px @orange);
+            background-color: #F5F5F5;   
         }
     }
-    
     section
     {
         h1
