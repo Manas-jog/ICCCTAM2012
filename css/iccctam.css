@@ -737,4 +737,5 @@ html{min-height:100%;}
 #contactUs{text-align:left;}
 #gettingThere h4,#gettingThere p{text-align:left;}
 #gettingThere iframe{width:100%;height:250px;}
+#sponsors div.row-fluid{border-bottom:1px solid #AEAEAE;padding:20px 0;margin:0 -20px;width:auto;}#sponsors div.row-fluid:first-child{border-top:1px solid #AEAEAE;}
 @media (min-width:1260px){#bitsLogo,#iccctamLogo,#ieeeLogo{height:auto;width:auto;}}@media (min-width:1440px) and (max-width:1620px){#iccctamNav ul.nav{width:266.52px;}#iccctamNav ul.nav li>a{width:244.51999999999998px;}}@media (min-width:1621px) and (max-width:1921){#iccctamNav ul.nav{width:299.46px;}#iccctamNav ul.nav li>a{width:277.46px;}}
