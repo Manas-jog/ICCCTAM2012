@@ -23,7 +23,7 @@
 
 // Components: common
 @import "sprites.less";
-//@import "dropdowns.less";
+@import "dropdowns.less";
 //@import "wells.less";
 @import "component-animations.less";
 @import "close.less";
@@ -170,6 +170,7 @@ html
             padding: 0;
             border: none;
             .box-shadow(none);
+            margin: 0;
         }
         h3
         {
@@ -198,9 +199,10 @@ html
 
 #gettingThere 
 {     
-    h4, p
+    h2, h3, h4, p
     {
-        text-align: left;   
+        text-align: left; 
+        margin-top: 10px;
     }
     
     iframe
@@ -209,6 +211,10 @@ html
        height: 250px;
     }
 
+    li
+    {
+        text-align: left;   
+    }
 }
 
 #sponsors
@@ -226,6 +232,21 @@ html
     }
 }
     
+#accordionTopicList
+{
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 220px;
+}
+
+#importantDates table
+{
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 330px;
+}
 //----------------------------------------------------------------------------
 //iccctam specific responsive behaviours
 

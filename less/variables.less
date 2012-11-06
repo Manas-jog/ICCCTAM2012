@@ -101,18 +101,18 @@
 
 // Dropdowns
 // -------------------------
-@dropdownBackground:            @white;
+@dropdownBackground:            @navbarBackground;
 @dropdownBorder:                rgba(0,0,0,.2);
 @dropdownDividerTop:            #e5e5e5;
 @dropdownDividerBottom:         @white;
 
 @dropdownLinkColor:             @grayDark;
 
-@dropdownLinkColorHover:        @white;
-@dropdownLinkBackgroundHover:   @dropdownLinkBackgroundActive;
+@dropdownLinkColorHover:        @black;
+@dropdownLinkBackgroundHover:   lighten(@dropdownLinkBackgroundActive, 5%);
 
-@dropdownLinkColorActive:       @dropdownLinkColor;
-@dropdownLinkBackgroundActive:  @linkColor;
+@dropdownLinkColorActive:       @black;
+@dropdownLinkBackgroundActive:  @navbarLinkBackgroundActive;
 
 
 
@@ -154,7 +154,7 @@
 
 // Navbar
 // -------------------------
-@navbarCollapseWidth:             767px;
+@navbarCollapseWidth:             979px;
 
 @navbarHeight:                    40px;
 @navbarBackground:                darken(@navbarBackgroundHighlight, 5%);
@@ -163,7 +163,7 @@
 
 @navbarText:                      @gray;
 @navbarLinkColor:                 @gray;
-@navbarLinkColorHover:            @baseColor;//@grayDark;
+@navbarLinkColorHover:            @grayDark;
 @navbarLinkColorActive:           @gray;
 @navbarLinkBackgroundHover:       transparent;
 @navbarLinkBackgroundActive:      darken(@navbarBackground, 5%);
