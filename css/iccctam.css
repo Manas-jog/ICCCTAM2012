@@ -718,7 +718,8 @@ html{min-height:100%;}
 #bitsLogo{height:85px;width:268px;}
 #iccctamLogo{height:110px;width:285px;}
 #ieeeLogo{height:50px;width:165px;}
-#iccctamNav{z-index:5000;}#iccctamNav.affix{top:0px;}
+#iccctamNav{z-index:5000;}#iccctamNav .navbar .brand{padding-top:0px;padding-bottom:0px;height:35px;}
+#iccctamNav.affix{top:0px;}
 #keynoteSpeakers{text-align:left;}#keynoteSpeakers .thumbnail{padding:0;border:none;-webkit-box-shadow:none;-moz-box-shadow:none;box-shadow:none;}#keynoteSpeakers .thumbnail>img{display:inline-block;width:150px;height:150px;margin:10px 0;}
 #keynoteSpeakers h3{line-height:30px;color:#183578;}
 #keynoteSpeakers h4{margin:0 0 10px 0;}
