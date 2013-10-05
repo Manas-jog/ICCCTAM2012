@@ -810,14 +810,14 @@
     <div id="registrationModal">
         <div class="modal">
             <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <button type="button" class="close mdismiss" data-dismiss="modal" aria-hidden="true">&times;</button>
                 <h3>Registration Closed</h3>
             </div>
             <div class="modal-body">
                 <p>Registration for this conference was closed on 2012.</p>
             </div>
             <div class="modal-footer">
-                <a href="#" class="btn btn-primary">Dismiss</a>
+                <a href="#" class="btn btn-primary mdismiss">Dismiss</a>
             </div>
         </div>
     </div>
@@ -858,12 +858,16 @@
           )
 
          var offset = 40;
+         
+        $('.mdismiss').click(function(){
+            $(".modal").hide();
+        });
 
         $('.navbar li a').click(function(event) {
-        event.preventDefault();
-        $($(this).attr('href'))[0].scrollIntoView();
-        scrollBy(0, -offset);
-});
+            event.preventDefault();
+            $($(this).attr('href'))[0].scrollIntoView();
+            scrollBy(0, -offset);
+        });
       }
     )
 
